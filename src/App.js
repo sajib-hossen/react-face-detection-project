@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useRef } from "react";
+import "./app.css";
 
 function App() {
+  const imgRef = useRef();
+  const canvasRef = useRef();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <img
+        ref={imgRef}
+        src="https://images.pexels.com/photos/160628/girls-lavender-two-dresses-160628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+        width="940"
+        height="650"
+      />
+      <canvas ref={canvasRef} width="940" height="650" />
     </div>
   );
 }
